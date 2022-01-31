@@ -240,16 +240,16 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(array, item) {
+function get20s(array) {
   const death = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i].years >= 1900 && array[i].years <= 2000){
+    if(array[i].years <= 1900 - 2000){
       death.push(array[i].name);
     }
-    return death;
+  return death;
+  }
 }
-}
-
+// I literally have no idea what the problem with this is i have tired evreything that i have learned. I know i am so close i just dont know what to do to get it right.
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
