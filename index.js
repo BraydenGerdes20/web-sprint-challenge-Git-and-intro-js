@@ -243,14 +243,15 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array) {
   const death = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i].years <= 1900 - 2000){
+    let years = array[i].years.split(' - ')
+    console.log('years', years);
+    if( years >= '1900' && years <= '2000'){
       death.push(array[i].name);
     }
-  return death;
   }
+  return death;
 }
-// I literally have no idea what the problem with this is i have tired evreything that i have learned. I know i am so close i just dont know what to do to get it right.
-
+console.log(get20s(artists))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -300,10 +301,10 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(array){
   const filtered = [];
   for(let i = 0; i < array.length; i++){
-  if(array[i].paintings >= 100){
+    if(array[i].paintings >= 100){
     filtered.push(array[i].name);
+    }
   }
-}
   return filtered;
 }
   
